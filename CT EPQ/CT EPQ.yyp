@@ -3,6 +3,7 @@
   "resourceVersion": "1.6",
   "name": "CT EPQ",
   "resources": [
+    {"id":{"name":"scr_inventory","path":"scripts/scr_inventory/scr_inventory.yy",},"order":1,},
     {"id":{"name":"spr_chara_example_1","path":"sprites/spr_chara_example_1/spr_chara_example_1.yy",},"order":0,},
     {"id":{"name":"obj_dialogue_alexia","path":"objects/obj_dialogue_alexia/obj_dialogue_alexia.yy",},"order":3,},
     {"id":{"name":"spr_chara_jacky","path":"sprites/spr_chara_jacky/spr_chara_jacky.yy",},"order":5,},

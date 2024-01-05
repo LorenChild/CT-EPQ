@@ -44,7 +44,7 @@ if (showingDialogue == true){
 	draw_text_ext(_textX, _textY, currentDialogue.message, 16, display_get_gui_width()-192);
 	
 	//changing alpha from 0 to 1 over time
-	alpha = lerp(alpha, 1, 0.06);
+	alpha = lerp(alpha, 1, 0.12);
 }
 
 draw_set_alpha(1);
