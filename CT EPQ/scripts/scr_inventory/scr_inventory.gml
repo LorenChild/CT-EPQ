@@ -4,6 +4,7 @@ function scr_inventory() constructor{
 	// another constructor script
 	//array to hold items
 	inventory_items = [];
+	
 	// function to add new item to inventory - no sprite perameter because unlike tutorial my inventory will be text based - instead description
 	item_set = function(_name, _quantity, _description){
 		// pushes struct to inventory array
@@ -13,6 +14,7 @@ function scr_inventory() constructor{
 		description: _description
 		});
 	}
+	
 	// function to find item already in array
 	item_find = function(_name){
 		// for loop - iterates through all values between 0 and length of inventory array
@@ -27,6 +29,7 @@ function scr_inventory() constructor{
 		// if array iterated through and item not found:
 		return -1;
 	}
+	
 	// function to add more of an existing item or to set a new item depending on if it exists in inventory or not
 	item_add = function(_name, _quantity, _description){
 		// uses find function to see if item is already in inventory
@@ -42,9 +45,47 @@ function scr_inventory() constructor{
 			item_set(_name, _quantity, _description);
 		}
 	}
+	
 	// to string function, to help debug struct
 	to_string = function(){
 		// returns array as a string
 		return json_stringify(inventory_items);
+	}
+	
+	// item has function - checks if you have a certain number of an item
+	item_has = function(_name, _quantity){
+		// gets index of item in list (if not there returns -1)
+		var _index = item_find(_name);
+		// if item exists
+		if (_index >= 0){
+			// returns true if there are that many items or more, false if not
+			return inventory_items[_index].quantity >= _quantity;
+		}
+		// if item doesn't exist returns false
+		return false;
+	}
+	
+	// item subtract function - to remove items
+	item_subtract = function(_name, _quantity){
+		var _index = item_find(_name);
+		// if item exists (if not find funct gives -1)
+		if (_index >= 0){
+			// if there are currently the number of items you're trying to remove in the inventory
+			if (item_has(_name, _quantity)){
+				// subtracts the specified number of the item
+				inventory_items[_index].quantity -= _quantity;
+				// removing item from list if quantity gets down to 0
+				if (inventory_items[_index].quantity <= 0){
+					// see function below
+					item_remove(_index);
+				}
+			}
+		}
+	}
+	
+	// item remove function - internal function to delete an item (specified by index) from the array
+	item_remove = function(_index){
+		// deletes item from array and shifts items behind forwards
+		array_delete(inventory_items, _index, 1);
 	}
 }

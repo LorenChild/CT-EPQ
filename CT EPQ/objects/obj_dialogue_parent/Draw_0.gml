@@ -9,7 +9,7 @@ if (showingDialogue == true){
 	var _border = 5;
 	var _padding = 16;
 	// figuring out height of message
-	height = string_height(currentDialogue.message);
+	height = string_height(currentDialogue.message) + 20;
 	// if text height greater than sprite height sets text height to sprite height
 	if (sprite_get_height(currentDialogue.sprite) > height){
 		height = sprite_get_height(currentDialogue.sprite);

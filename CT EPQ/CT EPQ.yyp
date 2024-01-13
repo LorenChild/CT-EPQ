@@ -16,6 +16,7 @@
     {"id":{"name":"spr_chara_not_alexia","path":"sprites/spr_chara_not_alexia/spr_chara_not_alexia.yy",},"order":4,},
     {"id":{"name":"spr_rm_example_background","path":"sprites/spr_rm_example_background/spr_rm_example_background.yy",},"order":2,},
     {"id":{"name":"obj_temporary_full_screen_switcher_and_escape_to_quit","path":"objects/obj_temporary_full_screen_switcher_and_escape_to_quit/obj_temporary_full_screen_switcher_and_escape_to_quit.yy",},"order":2,},
+    {"id":{"name":"spr_blank","path":"sprites/spr_blank/spr_blank.yy",},"order":6,},
     {"id":{"name":"obj_dialogue_jacky","path":"objects/obj_dialogue_jacky/obj_dialogue_jacky.yy",},"order":4,},
     {"id":{"name":"spr_chara_example_2","path":"sprites/spr_chara_example_2/spr_chara_example_2.yy",},"order":1,},
   ],
