@@ -13,21 +13,23 @@ hsp = (_right-_left)*spd;
 vsp = (_down-_up)*spd; // down is positive
 
 //collide and move - horizontal
-if (place_meeting(x + hsp, y, obj_football_collision)){
+if (place_meeting(x + hsp, y, obj_football_collision)) or (place_meeting(x + hsp, y, obj_football_ball)){
 	while (abs(hsp) > 0.1){
 		hsp *= 0.5;
-		if (!place_meeting(x + hsp, y, obj_football_collision)) x += hsp;
+		if (!place_meeting(x + hsp, y, obj_football_collision)) and (!place_meeting(x + hsp, y, obj_football_ball)) x += hsp;
 	}
 	hsp = 0;
 }
 x += hsp;
 
 //collide and move - vertical
-if (place_meeting(x, y + vsp, obj_football_collision)){
+if (place_meeting(x, y + vsp, obj_football_collision)) or (place_meeting(x, y + vsp, obj_football_ball)){
 	while (abs(vsp) > 0.1){
 		vsp *= 0.5;
-		if (!place_meeting(x, y+vsp, obj_football_collision)) y += vsp;
+		if (!place_meeting(x, y+vsp, obj_football_collision)) and (!place_meeting(x, y+vsp, obj_football_ball)) y += vsp;
 	}
 	vsp = 0;
 }
 y += vsp;
+
+

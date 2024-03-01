@@ -6,6 +6,7 @@
     {"id":{"name":"obj_dialogue_question_parent","path":"objects/obj_dialogue_question_parent/obj_dialogue_question_parent.yy",},"order":6,},
     {"id":{"name":"spr_football_goal","path":"sprites/spr_football_goal/spr_football_goal.yy",},"order":9,},
     {"id":{"name":"scr_inventory","path":"scripts/scr_inventory/scr_inventory.yy",},"order":1,},
+    {"id":{"name":"obj_football_score","path":"objects/obj_football_score/obj_football_score.yy",},"order":13,},
     {"id":{"name":"spr_chara_example_1","path":"sprites/spr_chara_example_1/spr_chara_example_1.yy",},"order":0,},
     {"id":{"name":"obj_dialogue_question_example","path":"objects/obj_dialogue_question_example/obj_dialogue_question_example.yy",},"order":7,},
     {"id":{"name":"obj_dialogue_alexia","path":"objects/obj_dialogue_alexia/obj_dialogue_alexia.yy",},"order":3,},
