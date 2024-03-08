@@ -3,14 +3,14 @@
 
 // gets player input - temp variables
 
-var _up = keyboard_check(vk_up);
-var _down = keyboard_check(vk_down);
+//var _up = keyboard_check(vk_up);
+//var _down = keyboard_check(vk_down);
 var _left = keyboard_check(vk_left);
 var _right = keyboard_check(vk_right);
 
 // working out if it should be going left/right, up/down or stationary, and how far
 hsp = (_right-_left)*spd;
-vsp = (_down-_up)*spd; // down is positive
+//vsp = (_down-_up)*spd; // down is positive
 
 //collide and move - horizontal
 if (place_meeting(x + hsp, y, obj_football_collision)) or (place_meeting(x + hsp, y, obj_football_ball)){
