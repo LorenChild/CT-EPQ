@@ -17,7 +17,7 @@ if (showingDialogue == false) {
 } else{
 	// if dialogue is already showing
 	// if any key pressed resets dialogue to nothing showing
-	if (keyboard_check_released(keyNext)){
+	if (keyboard_check_pressed(keyNext)){
 		showingDialogue = false;
 		alpha = 0;
 	}

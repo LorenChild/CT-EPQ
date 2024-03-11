@@ -21,10 +21,10 @@ if (showingDialogue == false) {
 	// if no option is currently selected
 	if (yesOrNo = 0){
 		// if left pressed goes to yes, if right then no
-		if (keyboard_check_released(keyLeft)){
+		if (keyboard_check_pressed(keyLeft)){
 			yesOrNo = 1;
 		}
-		if (keyboard_check_released(keyRight)){
+		if (keyboard_check_pressed(keyRight)){
 			yesOrNo = 2;
 		}
 	}
@@ -32,11 +32,11 @@ if (showingDialogue == false) {
 	// if yes is currently selected
 	if (yesOrNo = 1){
 		// if left pressed nothing happens, if right then no
-		if (keyboard_check_released(keyRight)){
+		if (keyboard_check_pressed(keyRight)){
 			yesOrNo = 2;
 		}
 		// if option is selected
-		if (keyboard_check_released(keySelect)){
+		if (keyboard_check_pressed(keySelect)){
 		showingDialogue = false;
 		alpha = 0;
 		// WOULD NEED TO ADD SOMETHING HERE TO TELL MAIN CODE OBJECT WHAT ANSWER WAS - use 'with' probably
@@ -49,11 +49,11 @@ if (showingDialogue == false) {
 	// if no is currently selected
 	if (yesOrNo = 2){
 		// if left pressed goes to yes, if right then nothing happens
-		if (keyboard_check_released(keyLeft)){
+		if (keyboard_check_pressed(keyLeft)){
 			yesOrNo = 1;
 		}
 		// if option is selected
-		if (keyboard_check_released(keySelect)){
+		if (keyboard_check_pressed(keySelect)){
 		showingDialogue = false;
 		alpha = 0;
 		// WOULD NEED TO ADD SOMETHING HERE TO TELL MAIN CODE OBJECT WHAT ANSWER WAS - use 'with' probably
