@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_temporary_full_screen_switcher_and_escape_to_quit",
+  "name": "obj_persistent",
   "spriteId": null,
   "solid": false,
   "visible": true,

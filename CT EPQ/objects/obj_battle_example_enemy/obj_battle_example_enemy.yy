@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_battle_enemy_example",
+  "name": "obj_battle_example_enemy",
   "spriteId": {
     "name": "spr_battle_enemy_example",
     "path": "sprites/spr_battle_enemy_example/spr_battle_enemy_example.yy",
