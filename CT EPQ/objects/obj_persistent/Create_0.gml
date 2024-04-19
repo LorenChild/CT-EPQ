@@ -4,6 +4,11 @@
 // changing to and from fullscreen
 fullscreen = true;
 
+// variable for which battle state we're in
+global.battleState = 0;
+// varibale for which bit of menu system text we're in in a battle
+global.menuText = 0;
+
 
 // INFO ON CHARACTERS and enemies - later, get it to load info from save file
 // order: 0 name, 1 max HP, 2 current HP, 3 base attack, 4 base defence, 
