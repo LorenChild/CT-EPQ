@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_battle_example_enemy",
+  "name": "obj_battle_example_character_TEST",
   "spriteId": {
-    "name": "spr_battle_enemy_example",
-    "path": "sprites/spr_battle_enemy_example/spr_battle_enemy_example.yy",
+    "name": "spr_chara_example_1",
+    "path": "sprites/spr_chara_example_1/spr_chara_example_1.yy",
   },
   "solid": false,
   "visible": true,

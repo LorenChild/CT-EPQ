@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_battle_example_dialogue_1",
+  "name": "obj_dialogue_I_have_no_idea",
   "spriteId": null,
   "solid": false,
   "visible": true,
