@@ -21,4 +21,19 @@ global.characterInfoTemp1 = ["Guy1", 30, 30, 30, 30, 30, 0, spr_chara_example_2]
 global.characterInfoTemp2 = ["Guy2", 30, 30, 30, 30, 30, 0, spr_chara_not_alexia]
 global.enemyInfoExample = ["Ex-ample", 200, 100, 10, 20, 30, 0, spr_chara_example]
 
-// INFO ON ITEMS
+// FIGHT MENU DATA
+// variable for the first popup menu that appears
+global.firstMenu = ["Attack", "Act", "Item", "Flee"];
+// another data set on charcter menu options because I don't want other list to get too hard to read
+// order: 0 name of main character info list, 1 act options, 2 support options
+global.characterOptionInfoFootball = [global.characterInfoFootball, ["Do a little dance", "Bounce"], ["Cheer", "Build pressure"]];
+global.characterOptionInfoTemp1 = [global.characterInfoTemp1, ["Cry", "Scream"], ["Whimper", "Yelp"]];
+global.characterOptionInfoTemp2 = [global.characterInfoTemp2, ["Have existential thoughts outloud", "Stare blankly"], ["Nihilist encouragement", "Think hard"]];
+
+// Haven't put the below code into OneNote because it's not useful yet or correct
+// INFO ON ITEMS - to do - use inventory script!
+// list of usable items in inventory
+//global.itemList = ["Lemon jam", "Long peas", "small stone"];
+// list of equippable artifacts in inventory
+//global.artifactList = ["Yoyo", "Cardboard box", "Lacrosse stick", "Flower clip"];
+// list of permanent / plot items in inventory

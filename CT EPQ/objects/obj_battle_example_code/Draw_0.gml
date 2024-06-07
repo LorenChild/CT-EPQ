@@ -3,15 +3,25 @@
 
 // drawing first character
 if (((global.menuText = 1) or (global.menuText = 2)) and (characterSelected1 = 0)){
-	// drawing it higher if its the character currently selected
+	// drawing it higher if its the character currently selected during 2nd and 3rd menu stages
 	draw_sprite(characterList[0][7], 0, 320, 546);
 } else{
 	draw_sprite(characterList[0][7], 0, 320, 576);
 }
 // 2nd chara
-draw_sprite(characterList[1][7], 0, 576, 576);
+if (((global.menuText = 1) or (global.menuText = 2)) and (characterSelected1 = 1)){
+	// drawing it higher if its the character currently selected during 2nd and 3rd menu stages
+	draw_sprite(characterList[1][7], 0, 576, 546);
+} else{
+	draw_sprite(characterList[1][7], 0, 576, 576);
+}
 // 3rd chara
-draw_sprite(characterList[2][7], 0, 832, 576);
+if (((global.menuText = 1) or (global.menuText = 2)) and (characterSelected1 = 2)){
+	// drawing it higher if its the character currently selected during 2nd and 3rd menu stages
+	draw_sprite(characterList[2][7], 0, 832, 546);
+} else{
+	draw_sprite(characterList[2][7], 0, 832, 576);
+}
 // enemy - using different sprite than for dialogue so have written it in rather than taking from list
 draw_sprite(spr_battle_enemy_example, 0, 640, 320);
 
@@ -31,4 +41,8 @@ if (currentState = 1){
 			draw_rectangle_color(822, 566, (822+164), (566+164), c_yellow, c_aqua, c_fuchsia, c_lime, true);
 		}
 	}
+	// in this stage box and first option menu text needs to appear, and selected text must be coloured
+//	if (global.menuText = 1){// and also 2? so it keeps showing menu but can't change selection in 3rd stage
+//		draw_rectangle_colour();
+//	}
 }

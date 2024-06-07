@@ -32,6 +32,8 @@ stateDialogue = function()
 // variables for menu system
 // first character selected
 characterSelected1 = 0;
+// 1st menu option selected for character selected 1
+menuOptionSelected1 = 0;
 
 stateMenu = function()
 {
@@ -42,7 +44,9 @@ stateMenu = function()
 	
 	// controls - going back and forth - select for forwards, shift for back
 	if (keyboard_check_pressed(vk_enter)) global.menuText += 1;
-	if (keyboard_check_pressed(vk_shift)) global.menuText -= 1;
+	if (keyboard_check_pressed(vk_shift)) and (global.menuText>0){
+		global.menuText -= 1;
+	}
 	
 	// fist bit of menu - select character to take main action
 	if (global.menuText = 0){
@@ -53,5 +57,6 @@ stateMenu = function()
 		if (characterSelected1 = -1) characterSelected1 = 2;
 		// see draw for this being show on screen.
 	}
-	
+	// in second menu bit need to be able to switch between options
+
 }
