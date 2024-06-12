@@ -8,7 +8,7 @@ currentState = 0;
 // things only happen with dialogue when its even! odd numbers are holders inbetween
 currentDialogueNumber = 0;
 // order: 0 name, 1 max HP, 2 current HP, 3 base attack, 4 base defence, 
-// 5 base charisma, 6 item equipped, 7 character face sprite
+// 5 base charisma, 6 item equipped, 7 character face sprite, 8 main options, 9 support options
 // lists of info of chracters and enemies involved in fight
 characterList = [global.characterInfoFootball, global.characterInfoTemp1, global.characterInfoTemp2];
 enemyList = [global.enemyInfoExample];
@@ -34,6 +34,11 @@ stateDialogue = function()
 characterSelected1 = 0;
 // 1st menu option selected for character selected 1
 menuOptionSelected1 = 0;
+// 2nd menu option selected for character selected 1
+menuOption2Selected1 = 0;
+
+// 2nd character selected
+characterSelected2 = 0;
 
 stateMenu = function()
 {
@@ -57,6 +62,24 @@ stateMenu = function()
 		if (characterSelected1 = -1) characterSelected1 = 2;
 		// see draw for this being show on screen.
 	}
+	
 	// in second menu bit need to be able to switch between options
-
+	else if (global.menuText = 1){
+		if (keyboard_check_pressed(vk_down)) menuOptionSelected1 += 1;
+		if (keyboard_check_pressed(vk_up)) menuOptionSelected1 -= 1;
+		// since there are only 3 character (variable set to 0, 1 and 2), switching back round to other side it it gets too big or small
+		if (menuOptionSelected1 = 4) menuOptionSelected1 = 0;
+		if (menuOptionSelected1 = -1) menuOptionSelected1 = 3;
+		// see draw for this being show on screen.
+	}
+	
+	// third menu bit! 2nd menu option but for 1st character selected
+	else if (global.menuText = 2){
+		if (keyboard_check_pressed(vk_down)) menuOption2Selected1 += 1;
+		if (keyboard_check_pressed(vk_up)) menuOption2Selected1 -= 1;
+		// BASED ON ARRAY LENGTH! switching back round to other side it it gets too big or small
+		if (menuOption2Selected1 = array_length(characterList[characterSelected1][8])) menuOption2Selected1 = 0;
+		if (menuOption2Selected1 = -1) menuOption2Selected1 = (array_length(characterList[characterSelected1][8]) - 1);
+		// see draw for this being show on screen.
+	}
 }
