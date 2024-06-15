@@ -18,13 +18,14 @@ global.menuText = 0;
 // if item equipped = 0, no item equipped
 global.characterInfoFootball = ["Football", 50, 50, 20, 10, 20, 0, spr_chara_example_1, ["Do a little dance", "Bounce"], ["Cheer", "Build pressure"]] // character sprite temporary!
 global.characterInfoTemp1 = ["Guy1", 30, 30, 30, 30, 30, 0, spr_chara_example_2, ["Cry", "Scream"], ["Whimper", "Yelp"]]
-global.characterInfoTemp2 = ["Guy2", 30, 30, 30, 30, 30, 0, spr_chara_not_alexia, ["Have existential thoughts outloud", "Stare blankly"], ["Nihilist encouragement", "Think hard"]]
+global.characterInfoTemp2 = ["Guy2", 30, 30, 30, 30, 30, 0, spr_chara_not_alexia, ["Existential thoughts", "Stare blankly"], ["Nihilist encouragement", "Think hard"]]
 
 global.enemyInfoExample = ["Ex-ample", 200, 100, 10, 20, 30, 0, spr_chara_example]
 
 // FIGHT MENU DATA
 // variable for the first popup menu that appears
-global.firstMenu = ["Attack", "Act", "Item", "Flee"];
+global.firstMenu = ["Act", "Item", "Flee"]; //attack option gotten rid of 12/06/24
+global.firstMenuSupport = ["Support", "Item"];
 
 
 // Haven't put the below code into OneNote because it's not useful yet or correct

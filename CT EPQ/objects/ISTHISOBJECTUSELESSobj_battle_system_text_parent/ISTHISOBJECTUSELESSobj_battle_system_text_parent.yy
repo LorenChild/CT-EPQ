@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_battle_system_text_parent",
+  "name": "ISTHISOBJECTUSELESSobj_battle_system_text_parent",
   "spriteId": null,
   "solid": false,
   "visible": true,

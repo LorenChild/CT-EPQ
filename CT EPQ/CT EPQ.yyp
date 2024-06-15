@@ -11,7 +11,7 @@
     {"id":{"name":"scr_inventory","path":"scripts/scr_inventory/scr_inventory.yy",},"order":1,},
     {"id":{"name":"obj_football_score","path":"objects/obj_football_score/obj_football_score.yy",},"order":13,},
     {"id":{"name":"obj_battle_example_enemy_TEST","path":"objects/obj_battle_example_enemy_TEST/obj_battle_example_enemy_TEST.yy",},"order":17,},
-    {"id":{"name":"obj_battle_system_text_parent","path":"objects/obj_battle_system_text_parent/obj_battle_system_text_parent.yy",},"order":20,},
+    {"id":{"name":"ISTHISOBJECTUSELESSobj_battle_system_text_parent","path":"objects/ISTHISOBJECTUSELESSobj_battle_system_text_parent/ISTHISOBJECTUSELESSobj_battle_system_text_parent.yy",},"order":20,},
     {"id":{"name":"spr_chara_example_1","path":"sprites/spr_chara_example_1/spr_chara_example_1.yy",},"order":0,},
     {"id":{"name":"obj_dialogue_question_example","path":"objects/obj_dialogue_question_example/obj_dialogue_question_example.yy",},"order":7,},
     {"id":{"name":"obj_system_text_TEST_code","path":"objects/obj_system_text_TEST_code/obj_system_text_TEST_code.yy",},"order":23,},
