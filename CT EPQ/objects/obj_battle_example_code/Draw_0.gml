@@ -1,6 +1,44 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// drawing health bars
+// character 1
+hpChara1 = characterList[0][2];
+hpMaxChara1 = characterList[0][1];
+hpPercentChara1 = hpChara1/hpMaxChara1;
+// drawing health bar
+healthBarMaxLength = 124; // 20 less than width of sprite so number HP value can be drawn to right
+healthBarLength1 = hpPercentChara1 * healthBarMaxLength;
+draw_rectangle_color(320-10, 740, (320-10+healthBarLength1), 750, c_red, c_red, c_red, c_red, false);
+// drawing number value
+draw_text((320-5+healthBarMaxLength), 740-5, string(hpChara1)+"/"+string(hpMaxChara1));
+// character 2
+hpChara2 = characterList[1][2];
+hpMaxChara2 = characterList[1][1];
+hpPercentChara2 = hpChara2/hpMaxChara2;
+// drawing health bar
+healthBarLength2 = hpPercentChara2 * healthBarMaxLength;
+draw_rectangle_color(576-10, 740, (576-10+healthBarLength2), 750, c_red, c_red, c_red, c_red, false);
+// drawing number value
+draw_text((576-5+healthBarMaxLength), 740-5, string(hpChara2)+"/"+string(hpMaxChara2));
+// character 3
+hpChara3 = characterList[2][2];
+hpMaxChara3 = characterList[2][1];
+hpPercentChara3 = hpChara3/hpMaxChara3;
+// drawing health bar
+healthBarLength3 = hpPercentChara3 * healthBarMaxLength;
+draw_rectangle_color(832-10, 740, (832-10+healthBarLength3), 750, c_red, c_red, c_red, c_red, false);
+// drawing number value
+draw_text((832-5+healthBarMaxLength), 740-5, string(hpChara3)+"/"+string(hpMaxChara3));
+// enemy
+healthBarMaxLengthEnemy = 350;
+hpEnemy1 = enemyList[0][2];
+hpMaxEnemy1 = enemyList[0][1];
+hpPercentEnemy1 = hpEnemy1/hpMaxEnemy1;
+// drawing health bar
+healthBarLengthEnemy1 = hpPercentEnemy1 * healthBarMaxLengthEnemy;
+draw_rectangle_color(640-360/2+5, 320+360/2, (640-360/2+5+healthBarLengthEnemy1), 320+360/2+10, c_red, c_red, c_red, c_red, false);
+
 
 // drawing first character
 if (((global.menuText = 1) or (global.menuText = 2)) and (characterSelected1 = 0)){

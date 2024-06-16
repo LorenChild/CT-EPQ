@@ -20,12 +20,16 @@ global.characterInfoFootball = ["Football", 50, 50, 20, 10, 20, 0, spr_chara_exa
 global.characterInfoTemp1 = ["Guy1", 30, 30, 30, 30, 30, 0, spr_chara_example_2, ["Cry", "Scream"], ["Whimper", "Yelp"]]
 global.characterInfoTemp2 = ["Guy2", 30, 30, 30, 30, 30, 0, spr_chara_not_alexia, ["Existential thoughts", "Stare blankly"], ["Nihilist encouragement", "Think hard"]]
 
-global.enemyInfoExample = ["Ex-ample", 200, 100, 10, 20, 30, 0, spr_chara_example]
+global.enemyInfoExample = ["Ex-ample", 200, 200, 10, 20, 30, 0, spr_chara_example]
 
 // FIGHT MENU DATA
 // variable for the first popup menu that appears
 global.firstMenu = ["Act", "Item", "Flee"]; //attack option gotten rid of 12/06/24
 global.firstMenuSupport = ["Support", "Item"];
+
+// 15/06/24 damage variables (to be properly assigned and changed in battle code object, including w use of scripts
+global.damage = 0;
+global.enemyDamage = 0;
 
 
 // Haven't put the below code into OneNote because it's not useful yet or correct

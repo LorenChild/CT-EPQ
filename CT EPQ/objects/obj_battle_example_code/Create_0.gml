@@ -144,5 +144,44 @@ stateMenu = function()
 		if (menuOption2Selected2 = array_length(characterList[characterSelected2][9])) menuOption2Selected2 = 0;
 		if (menuOption2Selected2 = -1) menuOption2Selected2 = (array_length(characterList[characterSelected2][9]) - 1);
 		// see draw for this being show on screen.
+	} else if (global.menuText = 6){
+		global.menuText = 0;
+		currentState = 2;
 	}
+}
+
+stateDamage = function()
+{
+	//(this state would have to be changed to add damage minigames)
+	// destroying menu system text
+	if (object_exists(obj_battle_example_system_text)){
+		instance_destroy(obj_battle_example_system_text);
+	}
+	// resetting damages to zero just in case
+	global.damage = 0;
+	global.enemyDamage = 0;
+	// maths for your damage - later on, when more options (eg item) added, need to change and put this in an if statement. 
+	// HERE WOULD ADD STUFF FROM EQUIPPED ITEMS??? Do I need to make a current atk / def / chr stat? or do I just add it directly to base things in list by way of variable?
+	scr_action_football_1(); // NEED TO MAKE THIS BE BASED ON MOVE USED ONCE SCRIPT DATA ADDED TO PERSISTENT OBJ
+	global.enemyDamage = 5; // CHANGE THIS
+	
+	// HERE ADD STUFF FOR SUPPORT OPTION (what does it do to you / enemy?)
+
+	// maths for enemy damage - ADD HERE!!!
+	
+	// subtracting damage (from current HP)
+	characterList[characterSelected1][2] -= global.enemyDamage;
+	// picks only enemy for this battle
+	enemyList[0][2] -= global.damage;
+	
+	// creating dialogue object that tells you how many
+	if (!instance_exists(obj_battle_example_dialogue_damage)){
+		instance_create_layer(x, y, "Instances", obj_battle_example_dialogue_damage);
+	}
+	
+	// sends you to state dialogue or HP keeps getting subtracted each step
+	currentState = 0;
+	
+	// when dialogue object no longer exists, it sends you to next state in destroy event
+	
 }

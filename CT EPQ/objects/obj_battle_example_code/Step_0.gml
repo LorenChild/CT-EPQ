@@ -7,4 +7,6 @@ if (currentState = 0){
 } else if (currentState = 1){
 	// running menu code next
 	stateMenu();
+} else if (currentState = 2){
+	stateDamage();
 }
