@@ -16,9 +16,9 @@ global.menuText = 0;
 // base means stat value before things from items and effects are added
 // atk range 0-100, def range 0-100, charisma range 0-100, HP range whatever feels right
 // if item equipped = 0, no item equipped
-global.characterInfoFootball = ["Football", 50, 50, 20, 10, 20, 0, spr_chara_example_1, ["Do a little dance", "Bounce"], ["Cheer", "Build pressure"]] // character sprite temporary!
-global.characterInfoTemp1 = ["Guy1", 30, 30, 30, 30, 30, 0, spr_chara_example_2, ["Cry", "Scream"], ["Whimper", "Yelp"]]
-global.characterInfoTemp2 = ["Guy2", 30, 30, 30, 30, 30, 0, spr_chara_not_alexia, ["Existential thoughts", "Stare blankly"], ["Nihilist encouragement", "Think hard"]]
+global.characterInfoFootball = ["Football", 40, 40, 20, 10, 20, 0, spr_chara_example_1, ["Do a little dance", "Bounce"], ["Cheer", "Build pressure"]] // character sprite temporary!
+global.characterInfoTemp1 = ["Guy1", 50, 50, 30, 10, 30, 0, spr_chara_example_2, ["Cry", "Scream"], ["Whimper", "Yelp"]]
+global.characterInfoTemp2 = ["Guy2", 30, 30, 30, 10, 30, 0, spr_chara_not_alexia, ["Existential thoughts", "Stare blankly"], ["Nihilist encouragement", "Think hard"]]
 
 global.enemyInfoExample = ["Ex-ample", 200, 200, 10, 20, 30, 0, spr_chara_example]
 

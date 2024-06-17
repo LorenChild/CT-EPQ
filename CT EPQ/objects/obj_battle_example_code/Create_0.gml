@@ -160,20 +160,94 @@ stateDamage = function()
 	// resetting damages to zero just in case
 	global.damage = 0;
 	global.enemyDamage = 0;
-	// maths for your damage - later on, when more options (eg item) added, need to change and put this in an if statement. 
-	// HERE WOULD ADD STUFF FROM EQUIPPED ITEMS??? Do I need to make a current atk / def / chr stat? or do I just add it directly to base things in list by way of variable?
-	scr_action_football_1(); // NEED TO MAKE THIS BE BASED ON MOVE USED ONCE SCRIPT DATA ADDED TO PERSISTENT OBJ
-	global.enemyDamage = 5; // CHANGE THIS
 	
-	// HERE ADD STUFF FOR SUPPORT OPTION (what does it do to you / enemy?)
-
-	// maths for enemy damage - ADD HERE!!!
+	// temp stats (to be edited by support options)
+	var _atk = characterList[characterSelected1][3];
+	var _def = characterList[characterSelected1][4];
+	var _chr = characterList[characterSelected1][5];
+	// enemy stats
+	var _enemyAtk = enemyList[0][3];
+	var _enemyDef = enemyList[0][4];
+	var _enemyChr = enemyList[0][5];
+	
+	// HERE WOULD ADD STUFF FROM EQUIPPED ITEMS - add to temp stats!!
+	// HERE ADD STUFF FOR SUPPORT OPTION - first so that temp stats are calculated then edited for this round by support options - (what does it do to you / enemy?)
+	
+	// calculating enemy damage first so I can edit it later
+	global.enemyDamage = (_enemyAtk*15)/_def; //  calc based on enemy atk and your def
+	// randomising enemy damage somewhat
+	var _randomiser = random_range(-5, 5);
+	global.enemyDamage += _randomiser;
+	// rounding to nearest whole number
+	global.enemyDamage = round(global.enemyDamage);
+	
+	// maths for your damage - later on, when more options (eg item) added, need to change maybe?
+	// diff things happen based on what you selected to do - main action
+	// MENU OPTION *2* SELECTED 1
+	if (characterSelected1 = 0){
+		if (menuOption2Selected1 = 0){
+			// 'do a little dance'
+			global.damage = _atk*1.5;
+			if (global.enemyDamage >= 5){
+				global.enemyDamage -= 5;
+			} else{
+				global.enemyDamage = 0;
+			}
+			
+		} else if (menuOption2Selected1 = 1){
+			// 'bounce'
+			global.damage = _atk*1.5;
+			
+		}
+	} else if (characterSelected1 = 1){
+		if (menuOption2Selected1 = 0){
+			// 'cry'
+			global.damage = _chr;
+			
+		} else if (menuOption2Selected1 = 1){
+			// 'scream'
+			global.damage = _chr*1.5
+			global.enemyDamage += 5;
+			
+		}
+	} else if (characterSelected1 = 2){
+		if (menuOption2Selected1 = 0){
+			// 'existential thoughts'
+			global.damage = _atk;
+			
+		} else if (menuOption2Selected1 = 1){
+			// 'stare blankly'
+			if (global.enemyDamage >= 10){
+				global.enemyDamage -= 10;
+			} else{
+				global.enemyDamage = 0;
+			}
+		}
+	}
+	
+	// picks only enemy for this battle
+	var _tempE = enemyList[0][2] // so correct amount of damage dealt is displayed? (see below)
+	enemyList[0][2] -= global.damage;
+	// so hp can't be -ve
+	if (enemyList[0][2] < 0){
+		enemyList[0][2] = 0;
+		global.damage = _tempE; // so correct amount of damage dealt is displayed? (at least the first time round)
+	}
+	
+	// HERE SEND TO WIN DIALOGUE IF YOU'VE WON, WITHOUT DOING ANY OTHER STUFF
 	
 	// subtracting damage (from current HP)
+	var _tempC = characterList[characterSelected1][2] // so correct amount of damage dealt is displayed? (see below)
 	characterList[characterSelected1][2] -= global.enemyDamage;
-	// picks only enemy for this battle
-	enemyList[0][2] -= global.damage;
+	// so hp can't be -ve
+	if (characterList[characterSelected1][2] < 0){
+		characterList[characterSelected1][2] = 0;
+		global.enemyDamage = _tempC; // so correct amount of damage dealt is displayed? (at least the first time round)
+	}
 	
+	// HERE SEND TO LOSE DIALOGUE IF YOU'VE LOST, WITHOUT DOING ANY OTHER STUFF
+	
+
 	// creating dialogue object that tells you how many
 	if (!instance_exists(obj_battle_example_dialogue_damage)){
 		instance_create_layer(x, y, "Instances", obj_battle_example_dialogue_damage);

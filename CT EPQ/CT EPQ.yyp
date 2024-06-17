@@ -49,7 +49,6 @@
     {"id":{"name":"obj_persistent","path":"objects/obj_persistent/obj_persistent.yy",},"order":2,},
     {"id":{"name":"spr_blank","path":"sprites/spr_blank/spr_blank.yy",},"order":6,},
     {"id":{"name":"obj_dialogue_jacky","path":"objects/obj_dialogue_jacky/obj_dialogue_jacky.yy",},"order":4,},
-    {"id":{"name":"scr_action_football_1","path":"scripts/scr_action_football_1/scr_action_football_1.yy",},"order":3,},
     {"id":{"name":"obj_battle_example_dialogue_0","path":"objects/obj_battle_example_dialogue_0/obj_battle_example_dialogue_0.yy",},"order":25,},
     {"id":{"name":"obj_dialogue_I_have_no_idea","path":"objects/obj_dialogue_I_have_no_idea/obj_dialogue_I_have_no_idea.yy",},"order":18,},
     {"id":{"name":"obj_football_collision","path":"objects/obj_football_collision/obj_football_collision.yy",},"order":9,},
