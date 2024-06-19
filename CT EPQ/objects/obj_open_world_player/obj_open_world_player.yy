@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_open_world_player",
   "spriteId": {
-    "name": "spr_football_collision",
-    "path": "sprites/spr_football_collision/spr_football_collision.yy",
+    "name": "spr_open_world_player",
+    "path": "sprites/spr_open_world_player/spr_open_world_player.yy",
   },
   "solid": false,
   "visible": true,

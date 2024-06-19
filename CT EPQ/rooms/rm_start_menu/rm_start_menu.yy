@@ -1,7 +1,7 @@
 {
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
-  "name": "room_start_menu",
+  "name": "rm_start_menu",
   "isDnd": false,
   "volume": 1.0,
   "parentRoom": null,
@@ -26,8 +26,8 @@
   "creationCodeFile": "",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_76569E30","path":"rooms/room_start_menu/room_start_menu.yy",},
-    {"name":"inst_7EB6F3C","path":"rooms/room_start_menu/room_start_menu.yy",},
+    {"name":"inst_76569E30","path":"rooms/rm_start_menu/rm_start_menu.yy",},
+    {"name":"inst_7EB6F3C","path":"rooms/rm_start_menu/rm_start_menu.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
