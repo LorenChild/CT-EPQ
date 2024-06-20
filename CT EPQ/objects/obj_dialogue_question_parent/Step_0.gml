@@ -37,12 +37,14 @@ if (showingDialogue == false) {
 		}
 		// if option is selected
 		if (keyboard_check_pressed(keySelect)){
-		showingDialogue = false;
-		alpha = 0;
-		// WOULD NEED TO ADD SOMETHING HERE TO TELL MAIN CODE OBJECT WHAT ANSWER WAS - use 'with' probably
-		// !!
-		// then resetting it to 0
-		yesOrNo = 0;
+			showingDialogue = false;
+			alpha = 0;
+			// WOULD NEED TO ADD SOMETHING HERE TO TELL MAIN CODE OBJECT WHAT ANSWER WAS - use 'with' probably
+			// !!
+			// saving value
+			oldYesOrNo = yesOrNo;
+			// then resetting it to 0
+			yesOrNo = 0;
 		}
 	}
 	
@@ -54,12 +56,14 @@ if (showingDialogue == false) {
 		}
 		// if option is selected
 		if (keyboard_check_pressed(keySelect)){
-		showingDialogue = false;
-		alpha = 0;
-		// WOULD NEED TO ADD SOMETHING HERE TO TELL MAIN CODE OBJECT WHAT ANSWER WAS - use 'with' probably
-		// !!
-		// then resetting it to 0
-		yesOrNo = 0;
+			showingDialogue = false;
+			alpha = 0;
+			// WOULD NEED TO ADD SOMETHING HERE TO TELL MAIN CODE OBJECT WHAT ANSWER WAS - use 'with' probably
+			// !!
+			// saving value
+			oldYesOrNo = yesOrNo;
+			// then resetting it to 0
+			yesOrNo = 0;
 		}
 	}
 }

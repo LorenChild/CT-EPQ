@@ -20,3 +20,7 @@ alpha = 0;
 // height of one line of text in current font - can check by debugging 'height' variable in obj_dialogue_parent draw event
 fontHeight = 21;
 
+
+//20/06/24 - old yes or no variable (from q before yesOrNo reset)
+oldYesOrNo = 0;
+

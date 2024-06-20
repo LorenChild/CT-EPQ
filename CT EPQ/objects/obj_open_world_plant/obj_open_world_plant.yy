@@ -1,18 +1,15 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_open_world_player",
+  "name": "obj_open_world_plant",
   "spriteId": {
-    "name": "spr_open_world_player",
-    "path": "sprites/spr_open_world_player/spr_open_world_player.yy",
+    "name": "spr_open_world_plant",
+    "path": "sprites/spr_open_world_plant/spr_open_world_plant.yy",
   },
   "solid": false,
   "visible": true,
   "managed": true,
-  "spriteMaskId": {
-    "name": "spr_open_world_player",
-    "path": "sprites/spr_open_world_player/spr_open_world_player.yy",
-  },
+  "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,
@@ -27,10 +24,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
