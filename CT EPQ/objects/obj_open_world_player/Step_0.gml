@@ -1,6 +1,23 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// displaying after battle dialogue if we're meant to
+if (global.afterBattleDialogue = 1){ // if lose
+	// setting it so inputs don't work and creating dialogue object
+	canMove = false;
+	instance_create_layer(10, 10, "dialogue_layer", obj_open_world_dialogue_lose);
+	// setting after battle dialogue variable back to not doing it (so only 1 dialogue instance created)
+	global.afterBattleDialogue = 0;
+	// canMove will be reset when object destroyed
+} else if (global.afterBattleDialogue = 2){ //  if win
+	// setting it so inputs don't work and creating dialogue object
+	canMove = false;
+	instance_create_layer(10, 10, "dialogue_layer", obj_open_world_dialogue_win);
+	// setting after battle dialogue variable back to not doing it (so only 1 dialogue instance created)
+	global.afterBattleDialogue = 0;
+	// canMove will be reset when object destroyed
+}
+
 // variables for keys (inputs update each step) - move with WASD
 // only works if canMove variable is true
 if canMove = true{

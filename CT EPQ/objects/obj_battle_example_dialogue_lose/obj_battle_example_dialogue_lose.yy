@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_battle_example_dialogue_damage",
+  "name": "obj_battle_example_dialogue_lose",
   "spriteId": null,
   "solid": false,
   "visible": true,

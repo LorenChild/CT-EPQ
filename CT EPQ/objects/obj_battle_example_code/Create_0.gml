@@ -12,6 +12,9 @@ currentDialogueNumber = 0;
 characterList = [global.characterInfoFootball, global.characterInfoTemp1, global.characterInfoTemp2];
 enemyList = [global.enemyInfoExample];
 
+// vairable for in damage state, tells you which damage dialogue has been displayed
+damageDisplayed = 0;
+
 
 // menu text variable - controls which bit of menu selection process and system text we're in
 // 0: character select, 1: menu 1 select, 2: menu 2 select, etc w dif charas
@@ -225,37 +228,64 @@ stateDamage = function()
 		}
 	}
 	
-	// picks only enemy for this battle
-	var _tempE = enemyList[0][2] // so correct amount of damage dealt is displayed? (see below)
-	enemyList[0][2] -= global.damage;
-	// so hp can't be -ve
-	if (enemyList[0][2] < 0){
-		enemyList[0][2] = 0;
-		global.damage = _tempE; // so correct amount of damage dealt is displayed? (at least the first time round)
+	// first bit of damage calculation and being displayed
+	if (damageDisplayed = 0){
+		// picks only enemy for this battle
+		// GETTING RID OF THIS var _tempE = enemyList[0][2] // so correct amount of damage dealt is displayed? (see below)
+		enemyList[0][2] -= global.damage;
+		// so hp can't be -ve
+		if (enemyList[0][2] < 0){
+			enemyList[0][2] = 0;
+			// GETTING RID OF THIS global.damage = _tempE; // so correct amount of damage dealt is displayed? (at least the first time round)
+		}
+	
+		// sending you to dialogue displaying how much damage you've done
+		if (!instance_exists(obj_battle_example_dialogue_damage_yours)){
+			currentState = 0; // sends you to state dialogue or HP keeps getting subtracted each step - on destroy sends you back to this state (2), and damageDisplayed is set to 1
+			instance_create_layer(x, y, "Instances", obj_battle_example_dialogue_damage_yours);
+		}
 	}
 	
-	// HERE SEND TO WIN DIALOGUE IF YOU'VE WON, WITHOUT DOING ANY OTHER STUFF
-	
-	// subtracting damage (from current HP)
-	var _tempC = characterList[characterSelected1][2] // so correct amount of damage dealt is displayed? (see below)
-	characterList[characterSelected1][2] -= global.enemyDamage;
-	// so hp can't be -ve
-	if (characterList[characterSelected1][2] < 0){
-		characterList[characterSelected1][2] = 0;
-		global.enemyDamage = _tempC; // so correct amount of damage dealt is displayed? (at least the first time round)
+	// 2nd bit - here sends you to win dialogue if you've won, without moving on to other stuff
+	if (damageDisplayed = 1){
+		if(enemyList[0][2] = 0){
+			// creating win dialogue - on destroy sends you to open world
+			if (!instance_exists(obj_battle_example_dialogue_win)){
+				instance_create_layer(x, y, "Instances", obj_battle_example_dialogue_win);
+			}
+		} else damageDisplayed = 2;
 	}
 	
-	// HERE SEND TO LOSE DIALOGUE IF YOU'VE LOST, WITHOUT DOING ANY OTHER STUFF
-	
-
-	// creating dialogue object that tells you how many
-	if (!instance_exists(obj_battle_example_dialogue_damage)){
-		instance_create_layer(x, y, "Instances", obj_battle_example_dialogue_damage);
+	// 3rd bit - calculating and displaying enemy damage against you if you haven't won
+	if (damageDisplayed = 2){
+		// subtracting damage (from current HP)
+		// GETTING RID OF THIS var _tempC = characterList[characterSelected1][2] // so correct amount of damage dealt is displayed? (see below)
+		characterList[characterSelected1][2] -= global.enemyDamage;
+		// so hp can't be -ve
+		if (characterList[characterSelected1][2] < 0){
+			characterList[characterSelected1][2] = 0;
+			// GETTING RID OF THIS global.enemyDamage = _tempC; // so correct amount of damage dealt is displayed? (at least the first time round)
+		}
+		
+		// sending you to dialogue displaying how much damage enemy has done
+		if (!instance_exists(obj_battle_example_dialogue_damage_enemys)){
+			currentState = 0; // sends you to state dialogue or HP keeps getting subtracted each step - on destroy sends you back to this state (2), and damageDisplayed is set to 3
+			instance_create_layer(x, y, "Instances", obj_battle_example_dialogue_damage_enemys);
+		}
 	}
 	
-	// sends you to state dialogue or HP keeps getting subtracted each step
-	currentState = 0;
-	
-	// when dialogue object no longer exists, it sends you to next state in destroy event
+	// 3rd bit - here sends you to lose dialogue if you've lost, without moving on to other stuff (back to start)
+	if (damageDisplayed = 3){
+		if (characterList[characterSelected1][2] = 0){
+			// creating lose dialogue - on destroy sends you to open world
+			if (!instance_exists(obj_battle_example_dialogue_lose)){
+				instance_create_layer(x, y, "Instances", obj_battle_example_dialogue_lose);
+			}
+		} else {
+			// resetting damage displayed to 0 and sending you back to menu state
+			damageDisplayed = 0;
+			currentState = 1;
+		}
+	}
 	
 }

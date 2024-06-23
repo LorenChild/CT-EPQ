@@ -4,10 +4,17 @@
 // changing to and from fullscreen
 fullscreen = true;
 
-// variable for which battle state we're in - IS THIS VARIABLE ACTUALLY USED?
+// variable for which battle state we're in - IS THIS VARIABLE ACTUALLY USED? NO! hooray.
 global.battleState = 0;
 // varibale for which bit of menu system text we're in in a battle
 global.menuText = 0;
+
+// 21/06/24 variable deciding whether / which after battle dialogue should play
+global.afterBattleDialogue = 0;
+// 21/06/24 variable storing coords of open world player object, loaded on create of object and updated on destroy
+global.playerCoords = [100, 100];
+// 21/06/24 same for player direction
+global.playerDirection = 1;
 
 
 // INFO ON CHARACTERS and enemies - later, get it to load info from save file

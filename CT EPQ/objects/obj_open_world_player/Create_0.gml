@@ -1,6 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// loading start position of player
+x = global.playerCoords[0];
+y = global.playerCoords[1];
+// loading start direction of player
+direction = global.playerDirection;
+
 image_speed = 0; // no animation running for player sprite at start
 hSpeed = 0; // horizontal distance moved each step
 vSpeed = 0; // vertical distance moved each step
