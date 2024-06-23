@@ -88,8 +88,8 @@ stateMenu = function()
 		
 		// 12/06/24
 		menuOption2Selected1 = 0;
-		// so you can't select flee or item
-		if (menuOptionSelected1 = 1) or (menuOptionSelected1 = 2){
+		// so you can't select item
+		if (menuOptionSelected1 = 1){
 			enterAllowed = 0;
 		} else{
 			enterAllowed = 1;
@@ -98,6 +98,12 @@ stateMenu = function()
 	
 	// third menu bit! 2nd menu option but for 1st character selected
 	else if (global.menuText = 2){
+		// 23/06/24 CHECKING IF YOU'VE PRESSED FLEE
+		if (menuOptionSelected1 = 2){
+			global.afterBattleDialogue = 3;
+			room_goto(rm_open_world);
+		}
+		
 		if (keyboard_check_pressed(vk_down)) menuOption2Selected1 += 1;
 		if (keyboard_check_pressed(vk_up)) menuOption2Selected1 -= 1;
 		// BASED ON ARRAY LENGTH! switching back round to other side it it gets too big or small

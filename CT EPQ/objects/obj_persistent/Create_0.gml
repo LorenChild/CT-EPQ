@@ -46,3 +46,6 @@ global.enemyDamage = 0;
 // list of equippable artifacts in inventory
 //global.artifactList = ["Yoyo", "Cardboard box", "Lacrosse stick", "Flower clip"];
 // list of permanent / plot items in inventory
+
+// 23/06/24 - variable for sending to menu
+escapePoints = 0;

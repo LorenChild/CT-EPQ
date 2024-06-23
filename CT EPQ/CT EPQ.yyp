@@ -70,6 +70,7 @@
     {"id":{"name":"obj_open_world_dialogue_spider_yes","path":"objects/obj_open_world_dialogue_spider_yes/obj_open_world_dialogue_spider_yes.yy",},"order":35,},
     {"id":{"name":"obj_battle_example_dialogue_0","path":"objects/obj_battle_example_dialogue_0/obj_battle_example_dialogue_0.yy",},"order":25,},
     {"id":{"name":"obj_open_world_plant","path":"objects/obj_open_world_plant/obj_open_world_plant.yy",},"order":31,},
+    {"id":{"name":"obj_open_world_dialogue_flee","path":"objects/obj_open_world_dialogue_flee/obj_open_world_dialogue_flee.yy",},"order":44,},
     {"id":{"name":"scr_macros","path":"scripts/scr_macros/scr_macros.yy",},"order":4,},
     {"id":{"name":"obj_open_world_player","path":"objects/obj_open_world_player/obj_open_world_player.yy",},"order":29,},
     {"id":{"name":"obj_dialogue_I_have_no_idea","path":"objects/obj_dialogue_I_have_no_idea/obj_dialogue_I_have_no_idea.yy",},"order":18,},

@@ -16,6 +16,13 @@ if (global.afterBattleDialogue = 1){ // if lose
 	// setting after battle dialogue variable back to not doing it (so only 1 dialogue instance created)
 	global.afterBattleDialogue = 0;
 	// canMove will be reset when object destroyed
+} else if (global.afterBattleDialogue = 3){ //  if you flee
+	// setting it so inputs don't work and creating dialogue object
+	canMove = false;
+	instance_create_layer(10, 10, "dialogue_layer", obj_open_world_dialogue_flee);
+	// setting after battle dialogue variable back to not doing it (so only 1 dialogue instance created)
+	global.afterBattleDialogue = 0;
+	// canMove will be reset when object destroyed
 }
 
 // variables for keys (inputs update each step) - move with WASD
