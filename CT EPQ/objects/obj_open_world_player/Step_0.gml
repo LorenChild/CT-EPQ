@@ -23,6 +23,13 @@ if (global.afterBattleDialogue = 1){ // if lose
 	// setting after battle dialogue variable back to not doing it (so only 1 dialogue instance created)
 	global.afterBattleDialogue = 0;
 	// canMove will be reset when object destroyed
+} else if (global.afterBattleDialogue = 4){ //  AFTER FOOTBALL MINIGAME
+	// setting it so inputs don't work and creating dialogue object
+	canMove = false;
+	instance_create_layer(10, 10, "dialogue_layer", obj_open_world_dialogue_football_score);
+	// setting after battle dialogue variable back to not doing it (so only 1 dialogue instance created)
+	global.afterBattleDialogue = 0;
+	// canMove will be reset when object destroyed
 }
 
 // variables for keys (inputs update each step) - move with WASD
@@ -126,4 +133,37 @@ if (keyEnter = true){
 	pressCheck(obj_open_world_spider, obj_open_world_dialogue_question_spider);
 	// enemy example - takes you to battle if yes
 	pressCheck(obj_open_world_enemy_example, obj_open_world_dialogue_question_enemy_example);
+	// football object - to take you to question and if yes, football minigame
+	pressCheck(obj_open_world_football, obj_open_world_dialogue_question_football);
+}
+
+// opening and closing inventory if shift pressed
+if keyboard_check_pressed(vk_shift){
+	// if canMove = true so can only open inventory if dialogue not open
+	if (inventoryOpen = false) and (canMove = true){
+		inventoryOpen = true;
+		canMove = false;
+	} else if (inventoryOpen = true){
+		inventoryOpen = false;
+		canMove = true;
+	}
+}
+// changing inventory selected value
+// getting inventory as array (so I can get its length)
+var _inventory_item = global.inventory.item_get();
+if (inventoryOpen = true){
+	inventoryInputUp = keyboard_check_pressed(vk_up);
+	inventoryInputDown = keyboard_check_pressed(vk_down);
+	inventoryInput = inventoryInputDown - inventoryInputUp;
+	if inventoryInput > 0{
+		inventoryOptionSelected += 1;
+	} else if inventoryInput < 0{
+		inventoryOptionSelected -= 1;
+	}
+	// so it wraps round
+	if inventoryOptionSelected = -1{
+		inventoryOptionSelected = array_length(_inventory_item) - 1;
+	} else if inventoryOptionSelected = array_length(_inventory_item){
+		inventoryOptionSelected = 0;
+	}
 }

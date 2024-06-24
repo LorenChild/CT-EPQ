@@ -33,3 +33,10 @@ if (place_meeting(x, y + vsp, obj_football_collision)) or (place_meeting(x, y + 
 y += vsp;
 
 
+// 24/06/24 - leaving room if enter pressed
+if (keyboard_check_pressed(vk_enter)){
+	global.afterBattleDialogue = 4;
+	room_goto(rm_open_world);
+}
+
+

@@ -20,3 +20,8 @@ localFrame = 0; // frame relative to animation (since we have 4 animations in di
 
 // variable to decide wether you can move
 canMove = true;
+
+// variable for if inventory should be drawn
+inventoryOpen = false;
+// inventory option selected variable - starts from 0
+inventoryOptionSelected = 0;

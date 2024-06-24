@@ -56,4 +56,3 @@ if (place_meeting(x, y, obj_football_eater_of_balls)){
 }
 
 
-

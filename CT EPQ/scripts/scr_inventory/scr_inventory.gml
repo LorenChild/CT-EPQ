@@ -88,4 +88,9 @@ function scr_inventory() constructor{
 		// deletes item from array and shifts items behind forwards
 		array_delete(inventory_items, _index, 1);
 	}
+	
+	// 24/06/24 - passes back local inventory array, so it can be indexed etc.
+	item_get = function(){
+		return inventory_items;
+	}
 }

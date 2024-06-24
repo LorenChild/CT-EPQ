@@ -12,7 +12,7 @@ global.menuText = 0;
 // 21/06/24 variable deciding whether / which after battle dialogue should play
 global.afterBattleDialogue = 0;
 // 21/06/24 variable storing coords of open world player object, loaded on create of object and updated on destroy
-global.playerCoords = [100, 100];
+global.playerCoords = [500, 500];
 // 21/06/24 same for player direction
 global.playerDirection = 1;
 
@@ -49,3 +49,12 @@ global.enemyDamage = 0;
 
 // 23/06/24 - variable for sending to menu
 escapePoints = 0;
+
+// 24/06/24 inventory!
+//create new inventory struct
+global.inventory = new scr_inventory();
+// adding items to inventory - name, quantity, description
+global.inventory.item_add("Wood", 1, "Looks chewy. Edible?");
+global.inventory.item_add("cough droops TM", 1, "Some kind of branded sweet.");
+global.inventory.item_add("Frog", 1, "Frog.");
+global.inventory.item_add("Knife", 1, "NO STOP-");
