@@ -58,3 +58,7 @@ global.inventory.item_add("Wood", 1, "Looks chewy. Edible?");
 global.inventory.item_add("cough droops TM", 1, "Some kind of branded sweet.");
 global.inventory.item_add("Frog", 1, "Frog.");
 global.inventory.item_add("Knife", 1, "NO STOP-");
+
+// 25/06/24 - wether egg object should exist or its already been picked up
+global.eggExists = true;
+

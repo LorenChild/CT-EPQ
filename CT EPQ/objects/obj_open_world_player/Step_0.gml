@@ -135,6 +135,8 @@ if (keyEnter = true){
 	pressCheck(obj_open_world_enemy_example, obj_open_world_dialogue_question_enemy_example);
 	// football object - to take you to question and if yes, football minigame
 	pressCheck(obj_open_world_football, obj_open_world_dialogue_question_football);
+	// if egg pressed, opens question of pick it up or no
+	pressCheck(obj_open_world_egg, obj_open_world_dialogue_question_egg);
 }
 
 // opening and closing inventory if shift pressed
