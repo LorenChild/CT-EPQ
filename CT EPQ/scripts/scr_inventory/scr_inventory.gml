@@ -6,12 +6,13 @@ function scr_inventory() constructor{
 	inventory_items = [];
 	
 	// function to add new item to inventory - no sprite perameter because unlike tutorial my inventory will be text based - instead description
-	item_set = function(_name, _quantity, _description){
+	item_set = function(_name, _quantity, _description, _hpChange){
 		// pushes struct to inventory array
 		array_push(inventory_items, {
 		name: _name,
 		quantity: _quantity,
-		description: _description
+		description: _description, // change in hp of selected character upon using item. if 0, can't be eaten
+		hpChange: _hpChange
 		});
 	}
 	
@@ -31,7 +32,7 @@ function scr_inventory() constructor{
 	}
 	
 	// function to add more of an existing item or to set a new item depending on if it exists in inventory or not
-	item_add = function(_name, _quantity, _description){
+	item_add = function(_name, _quantity, _description, _hpChange){
 		// uses find function to see if item is already in inventory
 		// if yes, gives value of place in array, if no gives -1
 		// temporary variable
@@ -42,7 +43,7 @@ function scr_inventory() constructor{
 			inventory_items[_index].quantity += _quantity;
 		} else{
 			// if it doesn't already exist, sets new item
-			item_set(_name, _quantity, _description);
+			item_set(_name, _quantity, _description, _hpChange);
 		}
 	}
 	

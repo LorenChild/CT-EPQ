@@ -6,7 +6,7 @@ if oldYesOrNo = 1{
 	// if yes pressed
 	instance_create_layer(x, y, "dialogue_layer", obj_open_world_dialogue_egg_yes);
 	// adding egg to inventory
-	global.inventory.item_add("Egg", 1, "It's shell is hard and shiny. A good specimen.");
+	global.inventory.item_add("Egg", 1, "It's shell is shiny. A good specimen. +30 HP", 30);
 	// destroying egg and barrier - destroys barrier touching egg
 	with obj_open_world_egg{
 		// instance_place to get unique id of object being collided with

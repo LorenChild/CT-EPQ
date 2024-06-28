@@ -24,14 +24,14 @@ global.playerDirection = 1;
 // atk range 0-100, def range 0-100, charisma range 0-100, HP range whatever feels right
 // if item equipped = 0, no item equipped
 global.characterInfoFootball = ["Football", 40, 40, 20, 10, 20, 0, spr_chara_example_1, ["Do a little dance", "Bounce"], ["Cheer", "Build pressure"]] // character sprite temporary!
-global.characterInfoTemp1 = ["Guy1", 50, 50, 30, 10, 30, 0, spr_chara_example_2, ["Cry", "Scream"], ["Whimper", "Yelp"]]
-global.characterInfoTemp2 = ["Guy2", 30, 30, 30, 10, 30, 0, spr_chara_not_alexia, ["Existential thoughts", "Stare blankly"], ["Nihilist encouragement", "Think hard"]]
+global.characterInfoTemp1 = ["Cri Guy", 50, 50, 30, 10, 30, 0, spr_chara_example_2, ["Cry", "Scream"], ["Whimper", "Yelp"]]
+global.characterInfoTemp2 = ["Sockratiis", 30, 30, 30, 10, 30, 0, spr_chara_not_alexia, ["Existential thoughts", "Stare blankly"], ["Nihilist encouragement", "Think hard"]]
 
 global.enemyInfoExample = ["Ex-ample", 200, 200, 10, 20, 30, 0, spr_chara_example]
 
 // FIGHT MENU DATA
 // variable for the first popup menu that appears
-global.firstMenu = ["Act", "Item", "Flee"]; //attack option gotten rid of 12/06/24
+global.firstMenu = ["Act", "Flee"]; //attack option gotten rid of 12/06/24, item option gotten rid of 26/06/24
 global.firstMenuSupport = ["Support", "Item"];
 
 // 15/06/24 damage variables (to be properly assigned and changed in battle code object, including w use of scripts
@@ -54,10 +54,9 @@ escapePoints = 0;
 //create new inventory struct
 global.inventory = new scr_inventory();
 // adding items to inventory - name, quantity, description
-global.inventory.item_add("Wood", 1, "Looks chewy. Edible?");
-global.inventory.item_add("cough droops TM", 1, "Some kind of branded sweet.");
-global.inventory.item_add("Frog", 1, "Frog.");
-global.inventory.item_add("Knife", 1, "NO STOP-");
+global.inventory.item_add("Wood", 1, "Looks chewy. +15 HP", 15);
+global.inventory.item_add("cough droops TM", 1, "Some kind of branded sweet. +9 HP", 9);
+global.inventory.item_add("Frog", 1, "Frog. +2 HP", 2);
 
 // 25/06/24 - wether egg object should exist or its already been picked up
 global.eggExists = true;

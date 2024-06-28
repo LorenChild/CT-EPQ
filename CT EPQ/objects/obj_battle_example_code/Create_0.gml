@@ -81,25 +81,25 @@ stateMenu = function()
 	else if (global.menuText = 1){
 		if (keyboard_check_pressed(vk_down)) menuOptionSelected1 += 1;
 		if (keyboard_check_pressed(vk_up)) menuOptionSelected1 -= 1;
-		// since there are only 3 options
-		if (menuOptionSelected1 = 3) menuOptionSelected1 = 0;
-		if (menuOptionSelected1 = -1) menuOptionSelected1 = 2;
+		// does n. of options based on n items in list
+		if (menuOptionSelected1 = array_length(global.firstMenu)) menuOptionSelected1 = 0;
+		if (menuOptionSelected1 = -1) menuOptionSelected1 = array_length(global.firstMenu) - 1;
 		// see draw for this being show on screen.
 		
 		// 12/06/24
 		menuOption2Selected1 = 0;
-		// so you can't select item
-		if (menuOptionSelected1 = 1){
-			enterAllowed = 0;
-		} else{
-			enterAllowed = 1;
-		}
+		//// so you can't select option - got rid of
+		//if (menuOptionSelected1 = 1){
+		//	enterAllowed = 0;
+		//} else{
+		//	enterAllowed = 1;
+		//}
 	}
 	
 	// third menu bit! 2nd menu option but for 1st character selected
 	else if (global.menuText = 2){
 		// 23/06/24 CHECKING IF YOU'VE PRESSED FLEE
-		if (menuOptionSelected1 = 2){
+		if (menuOptionSelected1 = 1){
 			global.afterBattleDialogue = 3;
 			room_goto(rm_open_world);
 		}

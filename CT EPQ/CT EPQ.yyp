@@ -82,6 +82,7 @@
     {"id":{"name":"scr_macros","path":"scripts/scr_macros/scr_macros.yy",},"order":4,},
     {"id":{"name":"obj_open_world_player","path":"objects/obj_open_world_player/obj_open_world_player.yy",},"order":29,},
     {"id":{"name":"obj_dialogue_I_have_no_idea","path":"objects/obj_dialogue_I_have_no_idea/obj_dialogue_I_have_no_idea.yy",},"order":18,},
+    {"id":{"name":"spr_chara_example_124","path":"sprites/spr_chara_example_124/spr_chara_example_124.yy",},"order":23,},
     {"id":{"name":"obj_open_world_egg","path":"objects/obj_open_world_egg/obj_open_world_egg.yy",},"order":49,},
     {"id":{"name":"rm_open_world","path":"rooms/rm_open_world/rm_open_world.yy",},"order":5,},
     {"id":{"name":"obj_football_collision","path":"objects/obj_football_collision/obj_football_collision.yy",},"order":9,},
