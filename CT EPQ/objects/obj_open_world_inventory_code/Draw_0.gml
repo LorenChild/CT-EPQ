@@ -1,10 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-// drawing self
-draw_self();
-
-// drawing inventory above
+// drawing inventory (above other stuff because object on higher layer)
 // getting inventory as array (so it can be indexed)
 var _inventory_item = global.inventory.item_get();
 if (inventoryOpen = 1) or (inventoryOpen = 2){

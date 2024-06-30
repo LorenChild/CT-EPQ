@@ -4,7 +4,7 @@
 // Creates new struct using dialogue script and assigns it to variable
 dialogue = new scr_dialogue();
 // assigning key used to move to next dialogue
-keyNext = vk_space;
+keyNext = vk_enter;
 // whether we're showing dialogue yet or not
 showingDialogue = false;
 // current dialogue to draw

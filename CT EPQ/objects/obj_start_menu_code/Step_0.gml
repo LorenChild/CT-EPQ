@@ -11,14 +11,18 @@ if (overallInput > 0){
 	optionSelected += 1;
 } else if (overallInput < 0) optionSelected -= 1;
 
-if (optionSelected = 2){
+if (optionSelected > 2){
 	optionSelected = 0;
-} else if (optionSelected = -1) optionSelected = 1;
+} else if (optionSelected = -1) optionSelected = 2;
 
 
 // doing what menu option says if enter pressed
 if keyboard_check_pressed(vk_enter){
 	if (optionSelected = 0){
 		room_goto_next();
-	} else if (optionSelected = 1) game_end();
+	} else if (optionSelected = 2){
+		game_end();
+	} else if optionSelected = 1{
+		room_goto(rm_controls_explained);
+	}
 }
